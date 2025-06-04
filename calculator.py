@@ -13,12 +13,17 @@ def divide(a, b):
     except ZeroDivisionError:
         return "Error: Division by zero"
 
+def power(a,b):
+    return a**b
+
+
 if __name__ == "__main__":
     print("Select operation:")
     print("1. Add")
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
+    print("5. Power")
 
     choice = input("Enter choice (1/2/3/4): ")
     num1 = float(input("Enter first number: "))
@@ -32,5 +37,7 @@ if __name__ == "__main__":
         print("Result:", multiply(num1, num2))
     elif choice == '4':
         print("Result:", divide(num1, num2))
+    elif choice == '5':
+        print("Result:", power(num1, num2))
     else:
         print("Invalid input")
