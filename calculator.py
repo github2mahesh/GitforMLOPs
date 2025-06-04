@@ -8,9 +8,10 @@ def multiply(a, b):
     return a * b
 
 def divide(a, b):
-    if b == 0:
+    try:
+        return a / b
+    except ZeroDivisionError:
         return "Error: Division by zero"
-    return a / b
 
 if __name__ == "__main__":
     print("Select operation:")
